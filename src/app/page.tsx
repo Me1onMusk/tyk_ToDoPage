@@ -24,8 +24,8 @@ function SortableTodo({
 
     // useSortable 훅을 통해 드래그 앤 드롭 동작에 필요한 속성과 함수를 가져옵니다.
     const { attributes, listeners, setNodeRef, transform, transition } = useSortable({
-      id: todo.id,
-      data: { type: "todo", boardId },
+        id: todo.id,
+        data: { type: "todo", boardId },
     });
 
     // 드래그 앤 드롭 시 이동 및 애니메이션(transition)을 적용하기 위한 스타일
@@ -105,7 +105,7 @@ function SortableBoard({
                     deleteBoard(board.id);
                 }}
                 className="text-red-500">
-                <i className="fas fa-close" /> 
+                <i className="fas fa-trash" /> 
             </button>
         </div>
 
